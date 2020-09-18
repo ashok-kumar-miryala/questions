@@ -1,0 +1,2 @@
+class AddUserIdToAnswer < ApplicationRecord
+end

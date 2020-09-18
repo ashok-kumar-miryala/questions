@@ -1,0 +1,18 @@
+<% title "Answer" %>
+
+<p>
+  <strong>Answer:</strong>
+  <%=h @answer.answer %>
+</p>
+
+<ol>
+  <% for answer in @question.answers %>
+  <li><%= h answer.answer %></li>
+  <% end %>
+</ol>
+
+<p>
+  <%= link_to "Edit", edit_question_path(@question) %> |
+  <%= link_to "Destroy", @question, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", questions_path %>
+</p>

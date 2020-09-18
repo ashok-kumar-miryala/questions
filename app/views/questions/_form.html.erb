@@ -1,0 +1,10 @@
+<% form_for Question.new do |f| %>
+  <p>
+    <%= f.label :question %><br />
+    <%= f.text_field :question %>
+  </p>
+  <% f.fields_for :answers do |builder| %>
+    <%= render 'answer_fields', :f => builder %>
+  <% end %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
